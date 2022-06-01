@@ -1,0 +1,5 @@
+rootProject.name = "MvviBase"
+include ':app'
+include ':common'
+include ':tests-common'
+include ':android-common'

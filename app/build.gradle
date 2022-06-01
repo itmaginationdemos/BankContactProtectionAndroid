@@ -1,0 +1,84 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.base.application"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "REST_API_URL", "\"https://banksec.ddnsgeek.com\""
+        }
+        release {
+            minifyEnabled false
+            buildConfigField "String", "REST_API_URL", "\"https://banksec.ddnsgeek.com\""
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}"
+    implementation "com.google.android.material:material:${versions.material}"
+    implementation "androidx.appcompat:appcompat:${versions.androidX.appCompat}"
+    implementation "androidx.core:core-ktx:${versions.androidX.coreKtx}"
+    implementation "androidx.constraintlayout:constraintlayout:${versions.androidX.constraintlayout}"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycle}"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:${versions.lifecycle}"
+
+    // Dependency Injection
+    implementation("com.google.dagger:hilt-android:${versions.hilt}")
+    implementation project(path: ':common')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(path: ':android-common')
+    kapt("com.google.dagger:hilt-android-compiler:${versions.hilt}")
+
+    // Navigation component
+    implementation "androidx.navigation:navigation-fragment-ktx:${versions.androidX.navigation}"
+    implementation "androidx.navigation:navigation-ui-ktx:${versions.androidX.navigation}"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:${versions.androidX.navigation}"
+    implementation "androidx.navigation:navigation-compose:${versions.androidX.navigation}"
+
+    // Networking
+    implementation "com.squareup.retrofit2:retrofit:${versions.squareup.retrofit}"
+    implementation "com.squareup.okhttp3:okhttp:${versions.squareup.okhttp}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${versions.squareup.okhttp}"
+    implementation "com.squareup.retrofit2:converter-gson:${versions.squareup.retrofit}"
+
+    testImplementation "junit:junit:${versions.junit}"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:${versions.coroutines}"
+    testImplementation "androidx.arch.core:core-testing:${versions.coreTesting}"
+    androidTestImplementation "androidx.test.ext:junit:${versions.androidXTest.extJunit}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${versions.androidXTest.espressoCore}"
+    testImplementation project(':tests-common')
+}
+
+kapt {
+    correctErrorTypes = true
+}
