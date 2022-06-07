@@ -17,7 +17,7 @@ _This is the repo for the front-end. See the repo for the Python back-end [here]
 
 # Bank Contact Protection Application
 
-Proof of Concept Android Application implementing concept described in _"Bank Contact Protection"_ paper prepared by ITMAGINATION.
+Proof of Concept Android Application implementing the concept described in the _"Bank Contact Protection"_ paper prepared by [ITMAGINATION](https://itmagination.com).
 
 ## Abstract
 
