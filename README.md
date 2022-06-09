@@ -8,12 +8,13 @@
 ###    #    #     # #     #  #####  ### #     # #     #    #    ### ####### #     #
 ```
 
-[![Visit our website](https://img.shields.io/badge/Visit Our Website-ITMAGINATION-black.svg)](https://www.itmagination.com)
+[![Visit our website](https://img.shields.io/badge/Visit&nbsp;Our&nbsp;Website-ITMAGINATION-black.svg)](https://www.itmagination.com/services/custom-software-development)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=_7DR-SsTd5I)
 
 _This is the repo for the front-end. See the repo for the Python back-end [here](https://github.com/itmaginationdemos/BankContactProtectionBackend)._
 
-# ! VIDEO HERE
+# [Bank Contact Protection Backend Application](https://www.youtube.com/watch?v=_7DR-SsTd5I)
 
 # Bank Contact Protection Application
 
@@ -27,7 +28,7 @@ Despite the growing IT systems, classic communication channels are still very po
 
 This is a proof of concept of application improving vulnerabilities in customer contact services based on phone calls between two users. In such scenarios the greatest risk is posed by the insecure authentication procedure of the communication parties.
 
-## This is a Proof Of Concept
+**Note: This is a Proof Of Concept**
 
 This is an implementation of the Proof of Concept presented in the _"Bank Contact Protection"_ paper prepared by ITMAGINATION. Please bear in mind that the purpose of the publishing this code is showcasing the concept presented in the paper, and not providing an application ready to use in production.
 
